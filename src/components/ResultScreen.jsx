@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n'
+import Confetti from './Confetti'
 
 function tierKey(percentage) {
   if (percentage >= 90) return 'result.tier.excellent'
@@ -45,6 +46,7 @@ export default function ResultScreen({ correctCount, totalQuestions, percentage,
 
   return (
     <div className="result-screen">
+      {percentage >= 90 && <Confetti />}
       <div className="stamp" role="img" aria-label={`${percentage}%`}>
         <span className="stamp-percent">{percentage}%</span>
         <span className="stamp-label">OKIN</span>
