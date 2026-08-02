@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useI18n } from '../i18n'
 
 function tierKey(percentage) {
@@ -7,8 +8,40 @@ function tierKey(percentage) {
   return 'result.tier.low'
 }
 
-export default function ResultScreen({ correctCount, totalQuestions, percentage, onPlayAgain }) {
+function buildShareText({ t, correctCount, totalQuestions, percentage, history }) {
+  const grid = history.map((ok) => (ok ? '🟫' : '⬜')).join('')
+  const url = window.location.href.split('?')[0].split('#')[0]
+  return [
+    `🍞 ${t('appTitle')} — ${correctCount}/${totalQuestions} (${percentage}%)`,
+    grid,
+    '',
+    t('share.cta'),
+    url
+  ].join('\n')
+}
+
+export default function ResultScreen({ correctCount, totalQuestions, percentage, history, onPlayAgain }) {
   const { t } = useI18n()
+  const [copied, setCopied] = useState(false)
+
+  async function handleShare() {
+    const text = buildShareText({ t, correctCount, totalQuestions, percentage, history })
+    if (navigator.share) {
+      try {
+        await navigator.share({ text })
+      } catch {
+        // el usuario canceló el diálogo de compartir; no hacemos nada
+      }
+      return
+    }
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    } catch {
+      // sin API de portapapeles disponible; no hay fallback razonable más
+    }
+  }
 
   return (
     <div className="result-screen">
@@ -23,9 +56,14 @@ export default function ResultScreen({ correctCount, totalQuestions, percentage,
         {t('result.score', { correct: correctCount, total: totalQuestions })}
       </p>
 
-      <button type="button" className="btn btn-primary" onClick={onPlayAgain}>
-        {t('result.playAgain')}
-      </button>
+      <div className="result-actions">
+        <button type="button" className="btn btn-primary" onClick={onPlayAgain}>
+          {t('result.playAgain')}
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={handleShare}>
+          {copied ? t('share.copied') : t('share.button')}
+        </button>
+      </div>
     </div>
   )
 }

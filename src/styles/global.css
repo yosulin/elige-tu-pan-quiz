@@ -254,6 +254,24 @@ main {
   background: var(--crust-dark);
 }
 
+.btn-secondary {
+  background: transparent;
+  color: var(--oven);
+  border: 1.5px solid var(--flour-deep);
+}
+
+.btn-secondary:hover {
+  border-color: var(--crust);
+}
+
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+}
+
 /* ============ FICHA DE PREGUNTA (vale de horno) ============ */
 
 .ticket {

@@ -33,6 +33,7 @@ export function useQuiz() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
   const [answered, setAnswered] = useState(null) // { selectedId, isCorrect } | null
+  const [history, setHistory] = useState([]) // bool[] - resultado de cada pregunta, en orden
 
   const totalQuestions = questions.length
 
@@ -45,6 +46,7 @@ export function useQuiz() {
     setCurrentIndex(0)
     setCorrectCount(0)
     setAnswered(null)
+    setHistory([])
     setStatus('playing')
   }, [])
 
@@ -54,6 +56,7 @@ export function useQuiz() {
       const current = questions[currentIndex]
       const isCorrect = selectedId === current.correctId
       setAnswered({ selectedId, isCorrect })
+      setHistory((h) => [...h, isCorrect])
       if (isCorrect) setCorrectCount((c) => c + 1)
     },
     [answered, questions, currentIndex]
@@ -74,6 +77,7 @@ export function useQuiz() {
     setCurrentIndex(0)
     setCorrectCount(0)
     setAnswered(null)
+    setHistory([])
   }, [])
 
   const percentage = useMemo(() => {
@@ -89,6 +93,7 @@ export function useQuiz() {
     correctCount,
     percentage,
     answered,
+    history,
     startGame,
     answer,
     next,

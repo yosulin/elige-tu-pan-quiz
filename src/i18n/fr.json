@@ -22,5 +22,8 @@
   "install.description": "Ajoutez-la à votre écran d'accueil pour jouer plus vite, même hors ligne.",
   "install.cta": "Installer",
   "install.iosDescription": "Appuyez sur Partager, puis « Sur l'écran d'accueil ».",
-  "install.dismiss": "Fermer la bannière d'installation"
+  "install.dismiss": "Fermer la bannière d'installation",
+  "share.button": "Partager le résultat",
+  "share.cta": "Combien en devineriez-vous ?",
+  "share.copied": "Copié ! Collez-le où vous voulez."
 }

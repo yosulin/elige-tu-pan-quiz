@@ -22,5 +22,8 @@
   "install.description": "Añádela a tu pantalla de inicio para jugar más rápido, incluso sin conexión.",
   "install.cta": "Instalar",
   "install.iosDescription": "Pulsa Compartir y luego \"Añadir a pantalla de inicio\".",
-  "install.dismiss": "Cerrar aviso de instalación"
+  "install.dismiss": "Cerrar aviso de instalación",
+  "share.button": "Compartir resultado",
+  "share.cta": "¿Tú cuántos aciertas?",
+  "share.copied": "¡Copiado! Pégalo donde quieras."
 }

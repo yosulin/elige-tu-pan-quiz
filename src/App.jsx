@@ -40,6 +40,7 @@ export default function App() {
             correctCount={quiz.correctCount}
             totalQuestions={quiz.totalQuestions}
             percentage={quiz.percentage}
+            history={quiz.history}
             onPlayAgain={quiz.startGame}
           />
         )}

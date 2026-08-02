@@ -22,5 +22,8 @@
   "install.description": "Gehitu hasiera-pantailara azkarrago jokatzeko, konexiorik gabe ere.",
   "install.cta": "Instalatu",
   "install.iosDescription": "Sakatu Partekatu eta gero \"Gehitu hasiera-pantailan\".",
-  "install.dismiss": "Itxi instalazio-abisua"
+  "install.dismiss": "Itxi instalazio-abisua",
+  "share.button": "Emaitza partekatu",
+  "share.cta": "Zenbat asmatuko zenuke zuk?",
+  "share.copied": "Kopiatuta! Itsatsi nahi duzun tokian."
 }
