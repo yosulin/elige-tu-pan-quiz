@@ -28,6 +28,7 @@
   "share.copied": "Copied! Paste it wherever you like.",
   "info.title": "About this app",
   "info.version": "Version",
+  "info.build": "Build",
   "info.updated": "Last updated",
   "info.close": "Close"
 }

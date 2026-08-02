@@ -28,6 +28,7 @@
   "share.copied": "Copié ! Collez-le où vous voulez.",
   "info.title": "À propos",
   "info.version": "Version",
+  "info.build": "Build",
   "info.updated": "Dernière mise à jour",
   "info.close": "Fermer"
 }

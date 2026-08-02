@@ -28,6 +28,7 @@
   "share.copied": "¡Copiado! Pégalo donde quieras.",
   "info.title": "Sobre esta app",
   "info.version": "Versión",
+  "info.build": "Compilación",
   "info.updated": "Última actualización",
   "info.close": "Cerrar"
 }

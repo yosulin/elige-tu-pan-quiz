@@ -34,6 +34,10 @@ export default function InfoPanel() {
                 <dd>v{__APP_VERSION__}</dd>
               </div>
               <div>
+                <dt>{t('info.build')}</dt>
+                <dd>#{__GIT_HASH__}</dd>
+              </div>
+              <div>
                 <dt>{t('info.updated')}</dt>
                 <dd>{__BUILD_DATE__}</dd>
               </div>
