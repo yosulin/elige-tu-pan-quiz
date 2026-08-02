@@ -17,5 +17,10 @@
   "result.tier.good": "Buen ojo con el pan",
   "result.tier.soso": "Vas cogiendo el oficio",
   "result.tier.low": "A por la próxima hornada",
-  "footer.madeIn": "Hecho en Zumaia"
+  "footer.madeIn": "Hecho en Zumaia",
+  "install.title": "Instala la app",
+  "install.description": "Añádela a tu pantalla de inicio para jugar más rápido, incluso sin conexión.",
+  "install.cta": "Instalar",
+  "install.iosDescription": "Pulsa Compartir y luego \"Añadir a pantalla de inicio\".",
+  "install.dismiss": "Cerrar aviso de instalación"
 }

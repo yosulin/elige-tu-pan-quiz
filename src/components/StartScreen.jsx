@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useI18n } from '../i18n'
 import panes from '../data/panes.json'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function StartScreen({ onStart }) {
   const { t } = useI18n()
@@ -14,7 +15,7 @@ export default function StartScreen({ onStart }) {
     <div className="start-screen">
       <div className="start-collage" aria-hidden="true">
         {collage.map((pan) => (
-          <img key={pan.id} src={pan.imagen} alt="" loading="lazy" />
+          <img key={pan.id} src={assetUrl(pan.imagen)} alt="" loading="lazy" />
         ))}
       </div>
 

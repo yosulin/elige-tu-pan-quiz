@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function QuizCard({ question, index, total, answered, onAnswer, onNext }) {
   const { t } = useI18n()
@@ -19,7 +20,7 @@ export default function QuizCard({ question, index, total, answered, onAnswer, o
       </div>
 
       <div className="ticket-photo-frame">
-        <img src={pan.imagen} alt="" />
+        <img src={assetUrl(pan.imagen)} alt="" />
       </div>
 
       <p className="ticket-prompt">{t('quiz.prompt')}</p>

@@ -1,9 +1,11 @@
 import { useI18n } from './i18n'
 import { useQuiz } from './hooks/useQuiz'
+import { assetUrl } from './utils/assetUrl'
 import LanguageSwitcher from './components/LanguageSwitcher'
 import StartScreen from './components/StartScreen'
 import QuizCard from './components/QuizCard'
 import ResultScreen from './components/ResultScreen'
+import InstallPrompt from './components/InstallPrompt'
 
 export default function App() {
   const { t } = useI18n()
@@ -13,6 +15,7 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <span className="brand">
+          <img src={assetUrl('favicon.svg')} alt="" className="brand-logo" />
           OKIN<span>·</span>Quiz
         </span>
         <LanguageSwitcher />
@@ -43,6 +46,7 @@ export default function App() {
       </main>
 
       <p className="footer-note">{t('footer.madeIn')}</p>
+      <InstallPrompt />
     </div>
   )
 }

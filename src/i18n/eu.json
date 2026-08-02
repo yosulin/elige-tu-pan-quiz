@@ -17,5 +17,10 @@
   "result.tier.good": "Begi ona duzu ogiarekin",
   "result.tier.soso": "Ofizioa ikasten ari zara",
   "result.tier.low": "Datorren hornadan, hobeto!",
-  "footer.madeIn": "Zumaian egina"
+  "footer.madeIn": "Zumaian egina",
+  "install.title": "Instalatu aplikazioa",
+  "install.description": "Gehitu hasiera-pantailara azkarrago jokatzeko, konexiorik gabe ere.",
+  "install.cta": "Instalatu",
+  "install.iosDescription": "Sakatu Partekatu eta gero \"Gehitu hasiera-pantailan\".",
+  "install.dismiss": "Itxi instalazio-abisua"
 }

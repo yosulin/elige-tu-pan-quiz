@@ -17,5 +17,10 @@
   "result.tier.good": "Bon coup d'œil !",
   "result.tier.soso": "Vous apprenez le métier",
   "result.tier.low": "À la prochaine fournée !",
-  "footer.madeIn": "Fabriqué à Zumaia"
+  "footer.madeIn": "Fabriqué à Zumaia",
+  "install.title": "Installer l'application",
+  "install.description": "Ajoutez-la à votre écran d'accueil pour jouer plus vite, même hors ligne.",
+  "install.cta": "Installer",
+  "install.iosDescription": "Appuyez sur Partager, puis « Sur l'écran d'accueil ».",
+  "install.dismiss": "Fermer la bannière d'installation"
 }

@@ -17,5 +17,10 @@
   "result.tier.good": "Good eye for bread!",
   "result.tier.soso": "You're learning the trade",
   "result.tier.low": "Better luck next batch!",
-  "footer.madeIn": "Made in Zumaia"
+  "footer.madeIn": "Made in Zumaia",
+  "install.title": "Install the app",
+  "install.description": "Add it to your home screen to play faster, even offline.",
+  "install.cta": "Install",
+  "install.iosDescription": "Tap Share, then \"Add to Home Screen\".",
+  "install.dismiss": "Close install banner"
 }
