@@ -2,281 +2,393 @@
   {
     "id": "chapatita-100-trigo-integral",
     "nombre": "CHAPATITA 100 % TRIGO INTEGRAL",
-    "imagen": "/images/chapatita-100-trigo-integral.jpg"
+    "imagen": "/images/chapatita-100-trigo-integral.jpg",
+    "peso": 80,
+    "longitud": 8
   },
   {
     "id": "barra-trigo-integral-100",
     "nombre": "BARRA TRIGO INTEGRAL 100%",
-    "imagen": "/images/barra-trigo-integral-100.jpg"
+    "imagen": "/images/barra-trigo-integral-100.jpg",
+    "peso": 250,
+    "longitud": 43
   },
   {
     "id": "chapata-frizzante",
     "nombre": "CHAPATA FRIZZANTE",
-    "imagen": "/images/chapata-frizzante.jpg"
+    "imagen": "/images/chapata-frizzante.jpg",
+    "peso": 300,
+    "longitud": 36
   },
   {
     "id": "burger-frizzante",
     "nombre": "BURGER FRIZZANTE",
-    "imagen": "/images/burger-frizzante.jpg"
+    "imagen": "/images/burger-frizzante.jpg",
+    "peso": null,
+    "longitud": 11
   },
   {
     "id": "bocata-frizzante",
     "nombre": "BOCATA FRIZZANTE",
-    "imagen": "/images/bocata-frizzante.jpg"
+    "imagen": "/images/bocata-frizzante.jpg",
+    "peso": null,
+    "longitud": 24
   },
   {
     "id": "bocata-nordico",
     "nombre": "BOCATA NORDICO",
-    "imagen": "/images/bocata-nordico.jpg"
+    "imagen": "/images/bocata-nordico.jpg",
+    "peso": 150,
+    "longitud": 27
   },
   {
     "id": "barrita-centeno-50",
     "nombre": "BARRITA CENTENO 50%",
-    "imagen": "/images/barrita-centeno-50.jpg"
+    "imagen": "/images/barrita-centeno-50.jpg",
+    "peso": 205,
+    "longitud": 30
   },
   {
     "id": "tallo-rustico-sesamo",
     "nombre": "TALLO RUSTICO SESAMO",
-    "imagen": "/images/tallo-rustico-sesamo.jpg"
+    "imagen": "/images/tallo-rustico-sesamo.jpg",
+    "peso": 340,
+    "longitud": 36.5
   },
   {
     "id": "koskor-90-semillas",
     "nombre": "KOSKOR 90 SEMILLAS",
-    "imagen": "/images/koskor-90-semillas.jpg"
+    "imagen": "/images/koskor-90-semillas.jpg",
+    "peso": null,
+    "longitud": 19
   },
   {
     "id": "viena-gourmet",
     "nombre": "VIENA GOURMET",
-    "imagen": "/images/viena-gourmet.jpg"
+    "imagen": "/images/viena-gourmet.jpg",
+    "peso": 120,
+    "longitud": 18
   },
   {
     "id": "bocadillo-koskor",
     "nombre": "BOCADILLO KOSKOR",
-    "imagen": "/images/bocadillo-koskor.jpg"
+    "imagen": "/images/bocadillo-koskor.jpg",
+    "peso": null,
+    "longitud": 27
   },
   {
     "id": "batela",
     "nombre": "BATELA",
-    "imagen": "/images/batela.jpg"
+    "imagen": "/images/batela.jpg",
+    "peso": 300,
+    "longitud": 53
   },
   {
     "id": "viena-gourmet-trigo-integral-51",
     "nombre": "VIENA GOURMET TRIGO INTEGRAL 51%",
-    "imagen": "/images/viena-gourmet-trigo-integral-51.jpg"
+    "imagen": "/images/viena-gourmet-trigo-integral-51.jpg",
+    "peso": 120,
+    "longitud": 17
   },
   {
     "id": "barra-gourmet-ready",
     "nombre": "BARRA GOURMET READY",
-    "imagen": "/images/barra-gourmet-ready.jpg"
+    "imagen": "/images/barra-gourmet-ready.jpg",
+    "peso": null,
+    "longitud": 45
   },
   {
     "id": "rombo-semillas",
     "nombre": "ROMBO SEMILLAS",
-    "imagen": "/images/rombo-semillas.jpg"
+    "imagen": "/images/rombo-semillas.jpg",
+    "peso": 80,
+    "longitud": 18
   },
   {
     "id": "chapata-mediana",
     "nombre": "CHAPATA MEDIANA",
-    "imagen": "/images/chapata-mediana.jpg"
+    "imagen": "/images/chapata-mediana.jpg",
+    "peso": 260,
+    "longitud": 26
   },
   {
     "id": "baguette-charmante",
     "nombre": "BAGUETTE CHARMANTE",
-    "imagen": "/images/baguette-charmante.jpg"
+    "imagen": "/images/baguette-charmante.jpg",
+    "peso": 305,
+    "longitud": 50
   },
   {
     "id": "chapata",
     "nombre": "CHAPATA",
-    "imagen": "/images/chapata.jpg"
+    "imagen": "/images/chapata.jpg",
+    "peso": 460,
+    "longitud": 37
   },
   {
     "id": "chapata-okin-1994",
     "nombre": "CHAPATA OKIN 1994",
-    "imagen": "/images/chapata-okin-1994.jpg"
+    "imagen": "/images/chapata-okin-1994.jpg",
+    "peso": 360,
+    "longitud": 43
   },
   {
     "id": "nova-celta",
     "nombre": "NOVA CELTA",
-    "imagen": "/images/nova-celta.jpg"
+    "imagen": "/images/nova-celta.jpg",
+    "peso": 295,
+    "longitud": 46
   },
   {
     "id": "pan-okin-1994",
     "nombre": "PAN OKIN 1994",
-    "imagen": "/images/pan-okin-1994.jpg"
+    "imagen": "/images/pan-okin-1994.jpg",
+    "peso": 460,
+    "longitud": 53
   },
   {
     "id": "pan-con-maiz-12",
     "nombre": "PAN CON MAIZ 12%",
-    "imagen": "/images/pan-con-maiz-12.jpg"
+    "imagen": "/images/pan-con-maiz-12.jpg",
+    "peso": 345,
+    "longitud": 37
   },
   {
     "id": "minichapata-plus",
     "nombre": "MINICHAPATA PLUS",
-    "imagen": "/images/minichapata-plus.jpg"
+    "imagen": "/images/minichapata-plus.jpg",
+    "peso": null,
+    "longitud": 8
   },
   {
     "id": "barra-gourmet",
     "nombre": "BARRA GOURMET",
-    "imagen": "/images/barra-gourmet.jpg"
+    "imagen": "/images/barra-gourmet.jpg",
+    "peso": 280,
+    "longitud": 45
   },
   {
     "id": "baguette-koskor",
     "nombre": "BAGUETTE KOSKOR",
-    "imagen": "/images/baguette-koskor.jpg"
+    "imagen": "/images/baguette-koskor.jpg",
+    "peso": 275,
+    "longitud": 54
   },
   {
     "id": "barra-mediana-de-aspas",
     "nombre": "BARRA MEDIANA DE ASPAS",
-    "imagen": "/images/barra-mediana-de-aspas.jpg"
+    "imagen": "/images/barra-mediana-de-aspas.jpg",
+    "peso": 280,
+    "longitud": 45
   },
   {
     "id": "paillasse-nature-300g",
     "nombre": "PAILLASSE NATURE 300g",
-    "imagen": "/images/paillasse-nature-300g.jpg"
+    "imagen": "/images/paillasse-nature-300g.jpg",
+    "peso": 300,
+    "longitud": 40
   },
   {
     "id": "bocadito-60",
     "nombre": "BOCADITO 60",
-    "imagen": "/images/bocadito-60.jpg"
+    "imagen": "/images/bocadito-60.jpg",
+    "peso": null,
+    "longitud": 15
   },
   {
     "id": "baguette-plus-gourmet",
     "nombre": "BAGUETTE PLUS GOURMET",
-    "imagen": "/images/baguette-plus-gourmet.jpg"
+    "imagen": "/images/baguette-plus-gourmet.jpg",
+    "peso": 285,
+    "longitud": 54.5
   },
   {
     "id": "barra-celta",
     "nombre": "BARRA CELTA",
-    "imagen": "/images/barra-celta.jpg"
+    "imagen": "/images/barra-celta.jpg",
+    "peso": 295,
+    "longitud": 41
   },
   {
     "id": "baguette-semillas",
     "nombre": "BAGUETTE SEMILLAS",
-    "imagen": "/images/baguette-semillas.jpg"
+    "imagen": "/images/baguette-semillas.jpg",
+    "peso": 280,
+    "longitud": 46
   },
   {
     "id": "pintxo-gourmet",
     "nombre": "PINTXO GOURMET",
-    "imagen": "/images/pintxo-gourmet.jpg"
+    "imagen": "/images/pintxo-gourmet.jpg",
+    "peso": null,
+    "longitud": 10.5
   },
   {
     "id": "pintxo-gourmet-30-trigo-integral",
     "nombre": "PINTXO GOURMET 30 % TRIGO INTEGRAL",
-    "imagen": "/images/pintxo-gourmet-30-trigo-integral.jpg"
+    "imagen": "/images/pintxo-gourmet-30-trigo-integral.jpg",
+    "peso": null,
+    "longitud": 10.5
   },
   {
     "id": "pintxo-gourmet-semillas",
     "nombre": "PINTXO GOURMET SEMILLAS",
-    "imagen": "/images/pintxo-gourmet-semillas.jpg"
+    "imagen": "/images/pintxo-gourmet-semillas.jpg",
+    "peso": null,
+    "longitud": 10
   },
   {
     "id": "paillasse-multi-300g",
     "nombre": "PAILLASSE MULTI 300G",
-    "imagen": "/images/paillasse-multi-300g.jpg"
+    "imagen": "/images/paillasse-multi-300g.jpg",
+    "peso": 300,
+    "longitud": 40
   },
   {
     "id": "barra-de-media",
     "nombre": "BARRA DE MEDIA",
-    "imagen": "/images/barra-de-media.jpg"
+    "imagen": "/images/barra-de-media.jpg",
+    "peso": 380,
+    "longitud": 54
   },
   {
     "id": "baguette-gourmet-225g",
     "nombre": "BAGUETTE GOURMET 225g.",
-    "imagen": "/images/baguette-gourmet-225g.jpg"
+    "imagen": "/images/baguette-gourmet-225g.jpg",
+    "peso": 225,
+    "longitud": 52
   },
   {
     "id": "bocadillo-gourmet",
     "nombre": "BOCADILLO GOURMET",
-    "imagen": "/images/bocadillo-gourmet.jpg"
+    "imagen": "/images/bocadillo-gourmet.jpg",
+    "peso": null,
+    "longitud": 27
   },
   {
     "id": "pan-con-pasas-7-5-y-nueces-5",
     "nombre": "PAN CON PASAS (7.5%) Y NUECES (5%)",
-    "imagen": "/images/pan-con-pasas-7-5-y-nueces-5.jpg"
+    "imagen": "/images/pan-con-pasas-7-5-y-nueces-5.jpg",
+    "peso": 230,
+    "longitud": 29
   },
   {
     "id": "bollo-centeno-50",
     "nombre": "BOLLO CENTENO 50%",
-    "imagen": "/images/bollo-centeno-50.jpg"
+    "imagen": "/images/bollo-centeno-50.jpg",
+    "peso": 92,
+    "longitud": 16
   },
   {
     "id": "pan-semillas",
     "nombre": "PAN SEMILLAS",
-    "imagen": "/images/pan-semillas.jpg"
+    "imagen": "/images/pan-semillas.jpg",
+    "peso": 345,
+    "longitud": 37.5
   },
   {
     "id": "baguetina-semillas",
     "nombre": "BAGUETINA SEMILLAS",
-    "imagen": "/images/baguetina-semillas.jpg"
+    "imagen": "/images/baguetina-semillas.jpg",
+    "peso": 150,
+    "longitud": 27
   },
   {
     "id": "koskor-300",
     "nombre": "KOSKOR 300",
-    "imagen": "/images/koskor-300.jpg"
+    "imagen": "/images/koskor-300.jpg",
+    "peso": 300,
+    "longitud": 44
   },
   {
     "id": "chapatita",
     "nombre": "CHAPATITA",
-    "imagen": "/images/chapatita.jpg"
+    "imagen": "/images/chapatita.jpg",
+    "peso": null,
+    "longitud": 12
   },
   {
     "id": "koskor-350",
     "nombre": "KOSKOR 350",
-    "imagen": "/images/koskor-350.jpg"
+    "imagen": "/images/koskor-350.jpg",
+    "peso": 350,
+    "longitud": 51
   },
   {
     "id": "premiere-330",
     "nombre": "PREMIERE 330",
-    "imagen": "/images/premiere-330.jpg"
+    "imagen": "/images/premiere-330.jpg",
+    "peso": 330,
+    "longitud": 53
   },
   {
     "id": "premiere-270",
     "nombre": "PREMIERE 270",
-    "imagen": "/images/premiere-270.jpg"
+    "imagen": "/images/premiere-270.jpg",
+    "peso": 270,
+    "longitud": 44.5
   },
   {
     "id": "premiere-380",
     "nombre": "PREMIERE 380",
-    "imagen": "/images/premiere-380.jpg"
+    "imagen": "/images/premiere-380.jpg",
+    "peso": 380,
+    "longitud": 55
   },
   {
     "id": "premiere-130",
     "nombre": "PREMIERE 130",
-    "imagen": "/images/premiere-130.jpg"
+    "imagen": "/images/premiere-130.jpg",
+    "peso": 130,
+    "longitud": 25
   },
   {
     "id": "baguette-bio",
     "nombre": "BAGUETTE BIO",
-    "imagen": "/images/baguette-bio.jpg"
+    "imagen": "/images/baguette-bio.jpg",
+    "peso": 285,
+    "longitud": 52
   },
   {
     "id": "tronquete-chapata",
     "nombre": "TRONQUETE-CHAPATA",
-    "imagen": "/images/tronquete-chapata.jpg"
+    "imagen": "/images/tronquete-chapata.jpg",
+    "peso": 360,
+    "longitud": 37
   },
   {
     "id": "txapela-plus",
     "nombre": "TXAPELA PLUS",
-    "imagen": "/images/txapela-plus.jpg"
+    "imagen": "/images/txapela-plus.jpg",
+    "peso": 400,
+    "longitud": 52
   },
   {
     "id": "rombo-bocata",
     "nombre": "ROMBO BOCATA",
-    "imagen": "/images/rombo-bocata.jpg"
+    "imagen": "/images/rombo-bocata.jpg",
+    "peso": null,
+    "longitud": 26
   },
   {
     "id": "rombo",
     "nombre": "ROMBO",
-    "imagen": "/images/rombo.jpg"
+    "imagen": "/images/rombo.jpg",
+    "peso": null,
+    "longitud": 16
   },
   {
     "id": "mini-rombo",
     "nombre": "MINI ROMBO",
-    "imagen": "/images/mini-rombo.jpg"
+    "imagen": "/images/mini-rombo.jpg",
+    "peso": null,
+    "longitud": 12
   },
   {
     "id": "mini-chapata",
     "nombre": "MINI CHAPATA",
-    "imagen": "/images/mini-chapata.png"
+    "imagen": "/images/mini-chapata.png",
+    "peso": null,
+    "longitud": 8
   }
 ]

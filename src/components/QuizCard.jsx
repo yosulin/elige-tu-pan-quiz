@@ -5,6 +5,8 @@ export default function QuizCard({ question, index, total, answered, onAnswer, o
   const { t } = useI18n()
   const { pan, options, correctId } = question
 
+  const measure = pan.peso ? `${pan.peso} G` : pan.longitud ? `${pan.longitud} CM` : null
+
   function optionClass(optionId) {
     if (!answered) return 'option-btn'
     if (optionId === correctId) return 'option-btn is-correct'
@@ -16,7 +18,7 @@ export default function QuizCard({ question, index, total, answered, onAnswer, o
     <div className="ticket">
       <div className="ticket-header">
         <span className="ticket-code">{t('quiz.question', { current: index + 1, total })}</span>
-        <span className="score-pill">{pan.id.slice(0, 6).toUpperCase()}</span>
+        {measure && <span className="score-pill">{measure}</span>}
       </div>
 
       <div className="ticket-photo-frame">
