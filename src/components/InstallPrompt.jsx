@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { useI18n } from '../i18n'
 import { assetUrl } from '../utils/assetUrl'
 
-const DISMISS_KEY = 'okin-quiz-install-dismissed'
-
 function isStandalone() {
   return (
     window.matchMedia?.('(display-mode: standalone)').matches ||
@@ -24,15 +22,11 @@ export default function InstallPrompt() {
   const { t } = useI18n()
   const [deferredPrompt, setDeferredPrompt] = useState(null)
   const [showIosHint, setShowIosHint] = useState(false)
+  // Cerrar el aviso solo lo oculta en esta visita — no se recuerda entre
+  // sesiones. Mientras la app no esté instalada, se insiste en cada visita.
   const [dismissed, setDismissed] = useState(false)
 
   useEffect(() => {
-    try {
-      if (window.localStorage.getItem(DISMISS_KEY) === '1') setDismissed(true)
-    } catch {
-      // sin storage disponible, seguimos sin recordar el cierre
-    }
-
     if (isStandalone()) return
 
     function handleBeforeInstall(event) {
@@ -59,11 +53,6 @@ export default function InstallPrompt() {
 
   function dismiss() {
     setDismissed(true)
-    try {
-      window.localStorage.setItem(DISMISS_KEY, '1')
-    } catch {
-      // ignorar si no hay storage
-    }
   }
 
   async function handleInstallClick() {
