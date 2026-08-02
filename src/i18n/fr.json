@@ -1,0 +1,21 @@
+{
+  "appTitle": "Quel est ce pain ?",
+  "appSubtitle": "Connaissez-vous la gamme de pains OKIN ?",
+  "start.title": "Prêt(e) ?",
+  "start.description": "Nous choisirons 10 pains au hasard dans notre catalogue. Devinez le nom de chacun !",
+  "start.cta": "Commencer",
+  "quiz.question": "QUESTION {current}/{total}",
+  "quiz.prompt": "Quel est le nom de ce pain ?",
+  "quiz.correct": "Correct !",
+  "quiz.incorrect": "C'était : {name}",
+  "quiz.next": "Suivant",
+  "result.title": "Félicitations !",
+  "result.score": "Vous avez trouvé {correct} sur {total}",
+  "result.percentage": "{percent}% de bonnes réponses",
+  "result.playAgain": "Rejouer",
+  "result.tier.excellent": "Maître boulanger !",
+  "result.tier.good": "Bon coup d'œil !",
+  "result.tier.soso": "Vous apprenez le métier",
+  "result.tier.low": "À la prochaine fournée !",
+  "footer.madeIn": "Fabriqué à Zumaia"
+}

@@ -1,0 +1,21 @@
+{
+  "appTitle": "Name that bread",
+  "appSubtitle": "How well do you know OKIN's bread range?",
+  "start.title": "Ready?",
+  "start.description": "We'll pick 10 random breads from our catalogue. Guess the name of each one!",
+  "start.cta": "Start",
+  "quiz.question": "QUESTION {current}/{total}",
+  "quiz.prompt": "What's this bread called?",
+  "quiz.correct": "Correct!",
+  "quiz.incorrect": "It was: {name}",
+  "quiz.next": "Next",
+  "result.title": "Congratulations!",
+  "result.score": "You got {correct} out of {total}",
+  "result.percentage": "{percent}% correct",
+  "result.playAgain": "Play again",
+  "result.tier.excellent": "Master baker!",
+  "result.tier.good": "Good eye for bread!",
+  "result.tier.soso": "You're learning the trade",
+  "result.tier.low": "Better luck next batch!",
+  "footer.madeIn": "Made in Zumaia"
+}

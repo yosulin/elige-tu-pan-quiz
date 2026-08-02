@@ -1,0 +1,282 @@
+[
+  {
+    "id": "chapatita-100-trigo-integral",
+    "nombre": "CHAPATITA 100 % TRIGO INTEGRAL",
+    "imagen": "/images/chapatita-100-trigo-integral.jpg"
+  },
+  {
+    "id": "barra-trigo-integral-100",
+    "nombre": "BARRA TRIGO INTEGRAL 100%",
+    "imagen": "/images/barra-trigo-integral-100.jpg"
+  },
+  {
+    "id": "chapata-frizzante",
+    "nombre": "CHAPATA FRIZZANTE",
+    "imagen": "/images/chapata-frizzante.jpg"
+  },
+  {
+    "id": "burger-frizzante",
+    "nombre": "BURGER FRIZZANTE",
+    "imagen": "/images/burger-frizzante.jpg"
+  },
+  {
+    "id": "bocata-frizzante",
+    "nombre": "BOCATA FRIZZANTE",
+    "imagen": "/images/bocata-frizzante.jpg"
+  },
+  {
+    "id": "bocata-nordico",
+    "nombre": "BOCATA NORDICO",
+    "imagen": "/images/bocata-nordico.jpg"
+  },
+  {
+    "id": "barrita-centeno-50",
+    "nombre": "BARRITA CENTENO 50%",
+    "imagen": "/images/barrita-centeno-50.jpg"
+  },
+  {
+    "id": "tallo-rustico-sesamo",
+    "nombre": "TALLO RUSTICO SESAMO",
+    "imagen": "/images/tallo-rustico-sesamo.jpg"
+  },
+  {
+    "id": "koskor-90-semillas",
+    "nombre": "KOSKOR 90 SEMILLAS",
+    "imagen": "/images/koskor-90-semillas.jpg"
+  },
+  {
+    "id": "viena-gourmet",
+    "nombre": "VIENA GOURMET",
+    "imagen": "/images/viena-gourmet.jpg"
+  },
+  {
+    "id": "bocadillo-koskor",
+    "nombre": "BOCADILLO KOSKOR",
+    "imagen": "/images/bocadillo-koskor.jpg"
+  },
+  {
+    "id": "batela",
+    "nombre": "BATELA",
+    "imagen": "/images/batela.jpg"
+  },
+  {
+    "id": "viena-gourmet-trigo-integral-51",
+    "nombre": "VIENA GOURMET TRIGO INTEGRAL 51%",
+    "imagen": "/images/viena-gourmet-trigo-integral-51.jpg"
+  },
+  {
+    "id": "barra-gourmet-ready",
+    "nombre": "BARRA GOURMET READY",
+    "imagen": "/images/barra-gourmet-ready.jpg"
+  },
+  {
+    "id": "rombo-semillas",
+    "nombre": "ROMBO SEMILLAS",
+    "imagen": "/images/rombo-semillas.jpg"
+  },
+  {
+    "id": "chapata-mediana",
+    "nombre": "CHAPATA MEDIANA",
+    "imagen": "/images/chapata-mediana.jpg"
+  },
+  {
+    "id": "baguette-charmante",
+    "nombre": "BAGUETTE CHARMANTE",
+    "imagen": "/images/baguette-charmante.jpg"
+  },
+  {
+    "id": "chapata",
+    "nombre": "CHAPATA",
+    "imagen": "/images/chapata.jpg"
+  },
+  {
+    "id": "chapata-okin-1994",
+    "nombre": "CHAPATA OKIN 1994",
+    "imagen": "/images/chapata-okin-1994.jpg"
+  },
+  {
+    "id": "nova-celta",
+    "nombre": "NOVA CELTA",
+    "imagen": "/images/nova-celta.jpg"
+  },
+  {
+    "id": "pan-okin-1994",
+    "nombre": "PAN OKIN 1994",
+    "imagen": "/images/pan-okin-1994.jpg"
+  },
+  {
+    "id": "pan-con-maiz-12",
+    "nombre": "PAN CON MAIZ 12%",
+    "imagen": "/images/pan-con-maiz-12.jpg"
+  },
+  {
+    "id": "minichapata-plus",
+    "nombre": "MINICHAPATA PLUS",
+    "imagen": "/images/minichapata-plus.jpg"
+  },
+  {
+    "id": "barra-gourmet",
+    "nombre": "BARRA GOURMET",
+    "imagen": "/images/barra-gourmet.jpg"
+  },
+  {
+    "id": "baguette-koskor",
+    "nombre": "BAGUETTE KOSKOR",
+    "imagen": "/images/baguette-koskor.jpg"
+  },
+  {
+    "id": "barra-mediana-de-aspas",
+    "nombre": "BARRA MEDIANA DE ASPAS",
+    "imagen": "/images/barra-mediana-de-aspas.jpg"
+  },
+  {
+    "id": "paillasse-nature-300g",
+    "nombre": "PAILLASSE NATURE 300g",
+    "imagen": "/images/paillasse-nature-300g.jpg"
+  },
+  {
+    "id": "bocadito-60",
+    "nombre": "BOCADITO 60",
+    "imagen": "/images/bocadito-60.jpg"
+  },
+  {
+    "id": "baguette-plus-gourmet",
+    "nombre": "BAGUETTE PLUS GOURMET",
+    "imagen": "/images/baguette-plus-gourmet.jpg"
+  },
+  {
+    "id": "barra-celta",
+    "nombre": "BARRA CELTA",
+    "imagen": "/images/barra-celta.jpg"
+  },
+  {
+    "id": "baguette-semillas",
+    "nombre": "BAGUETTE SEMILLAS",
+    "imagen": "/images/baguette-semillas.jpg"
+  },
+  {
+    "id": "pintxo-gourmet",
+    "nombre": "PINTXO GOURMET",
+    "imagen": "/images/pintxo-gourmet.jpg"
+  },
+  {
+    "id": "pintxo-gourmet-30-trigo-integral",
+    "nombre": "PINTXO GOURMET 30 % TRIGO INTEGRAL",
+    "imagen": "/images/pintxo-gourmet-30-trigo-integral.jpg"
+  },
+  {
+    "id": "pintxo-gourmet-semillas",
+    "nombre": "PINTXO GOURMET SEMILLAS",
+    "imagen": "/images/pintxo-gourmet-semillas.jpg"
+  },
+  {
+    "id": "paillasse-multi-300g",
+    "nombre": "PAILLASSE MULTI 300G",
+    "imagen": "/images/paillasse-multi-300g.jpg"
+  },
+  {
+    "id": "barra-de-media",
+    "nombre": "BARRA DE MEDIA",
+    "imagen": "/images/barra-de-media.jpg"
+  },
+  {
+    "id": "baguette-gourmet-225g",
+    "nombre": "BAGUETTE GOURMET 225g.",
+    "imagen": "/images/baguette-gourmet-225g.jpg"
+  },
+  {
+    "id": "bocadillo-gourmet",
+    "nombre": "BOCADILLO GOURMET",
+    "imagen": "/images/bocadillo-gourmet.jpg"
+  },
+  {
+    "id": "pan-con-pasas-7-5-y-nueces-5",
+    "nombre": "PAN CON PASAS (7.5%) Y NUECES (5%)",
+    "imagen": "/images/pan-con-pasas-7-5-y-nueces-5.jpg"
+  },
+  {
+    "id": "bollo-centeno-50",
+    "nombre": "BOLLO CENTENO 50%",
+    "imagen": "/images/bollo-centeno-50.jpg"
+  },
+  {
+    "id": "pan-semillas",
+    "nombre": "PAN SEMILLAS",
+    "imagen": "/images/pan-semillas.jpg"
+  },
+  {
+    "id": "baguetina-semillas",
+    "nombre": "BAGUETINA SEMILLAS",
+    "imagen": "/images/baguetina-semillas.jpg"
+  },
+  {
+    "id": "koskor-300",
+    "nombre": "KOSKOR 300",
+    "imagen": "/images/koskor-300.jpg"
+  },
+  {
+    "id": "chapatita",
+    "nombre": "CHAPATITA",
+    "imagen": "/images/chapatita.jpg"
+  },
+  {
+    "id": "koskor-350",
+    "nombre": "KOSKOR 350",
+    "imagen": "/images/koskor-350.jpg"
+  },
+  {
+    "id": "premiere-330",
+    "nombre": "PREMIERE 330",
+    "imagen": "/images/premiere-330.jpg"
+  },
+  {
+    "id": "premiere-270",
+    "nombre": "PREMIERE 270",
+    "imagen": "/images/premiere-270.jpg"
+  },
+  {
+    "id": "premiere-380",
+    "nombre": "PREMIERE 380",
+    "imagen": "/images/premiere-380.jpg"
+  },
+  {
+    "id": "premiere-130",
+    "nombre": "PREMIERE 130",
+    "imagen": "/images/premiere-130.jpg"
+  },
+  {
+    "id": "baguette-bio",
+    "nombre": "BAGUETTE BIO",
+    "imagen": "/images/baguette-bio.jpg"
+  },
+  {
+    "id": "tronquete-chapata",
+    "nombre": "TRONQUETE-CHAPATA",
+    "imagen": "/images/tronquete-chapata.jpg"
+  },
+  {
+    "id": "txapela-plus",
+    "nombre": "TXAPELA PLUS",
+    "imagen": "/images/txapela-plus.jpg"
+  },
+  {
+    "id": "rombo-bocata",
+    "nombre": "ROMBO BOCATA",
+    "imagen": "/images/rombo-bocata.jpg"
+  },
+  {
+    "id": "rombo",
+    "nombre": "ROMBO",
+    "imagen": "/images/rombo.jpg"
+  },
+  {
+    "id": "mini-rombo",
+    "nombre": "MINI ROMBO",
+    "imagen": "/images/mini-rombo.jpg"
+  },
+  {
+    "id": "mini-chapata",
+    "nombre": "MINI CHAPATA",
+    "imagen": "/images/mini-chapata.png"
+  }
+]

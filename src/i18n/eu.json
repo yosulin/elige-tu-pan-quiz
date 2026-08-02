@@ -1,0 +1,21 @@
+{
+  "appTitle": "Zein ogi da?",
+  "appSubtitle": "Ezagutzen al duzu OKINen ogi-sorta?",
+  "start.title": "Prest zaude?",
+  "start.description": "Gure katalogotik 10 ogi ausaz aukeratuko ditugu. Asmatu bakoitzaren izena!",
+  "start.cta": "Hasi",
+  "quiz.question": "{current}/{total} GALDERA",
+  "quiz.prompt": "Zein da ogi honen izena?",
+  "quiz.correct": "Zuzen!",
+  "quiz.incorrect": "Hau zen: {name}",
+  "quiz.next": "Hurrengoa",
+  "result.title": "Zorionak!",
+  "result.score": "{total}etik {correct} asmatu dituzu",
+  "result.percentage": "Asmatze-tasa: %{percent}",
+  "result.playAgain": "Berriz jokatu",
+  "result.tier.excellent": "Okineko maisua zara!",
+  "result.tier.good": "Begi ona duzu ogiarekin",
+  "result.tier.soso": "Ofizioa ikasten ari zara",
+  "result.tier.low": "Datorren hornadan, hobeto!",
+  "footer.madeIn": "Zumaian egina"
+}

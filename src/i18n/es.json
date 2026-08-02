@@ -1,0 +1,21 @@
+{
+  "appTitle": "¿Qué pan es?",
+  "appSubtitle": "¿Cuánto conoces el catálogo de OKIN?",
+  "start.title": "¿Preparado?",
+  "start.description": "Elegiremos 10 panes al azar de nuestro catálogo. ¡Adivina el nombre de cada uno!",
+  "start.cta": "Empezar",
+  "quiz.question": "PREGUNTA {current}/{total}",
+  "quiz.prompt": "¿Cómo se llama este pan?",
+  "quiz.correct": "¡Correcto!",
+  "quiz.incorrect": "Era: {name}",
+  "quiz.next": "Siguiente",
+  "result.title": "¡Enhorabuena!",
+  "result.score": "Has acertado {correct} de {total}",
+  "result.percentage": "{percent}% de aciertos",
+  "result.playAgain": "Volver a jugar",
+  "result.tier.excellent": "¡Maestro panadero!",
+  "result.tier.good": "Buen ojo con el pan",
+  "result.tier.soso": "Vas cogiendo el oficio",
+  "result.tier.low": "A por la próxima hornada",
+  "footer.madeIn": "Hecho en Zumaia"
+}
