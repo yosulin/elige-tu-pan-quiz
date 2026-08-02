@@ -1,7 +1,9 @@
 import { useI18n } from './i18n'
 import { useQuiz } from './hooks/useQuiz'
+import { useTheme } from './hooks/useTheme'
 import { assetUrl } from './utils/assetUrl'
 import LanguageSwitcher from './components/LanguageSwitcher'
+import ThemeToggle from './components/ThemeToggle'
 import StartScreen from './components/StartScreen'
 import QuizCard from './components/QuizCard'
 import ResultScreen from './components/ResultScreen'
@@ -10,6 +12,7 @@ import InstallPrompt from './components/InstallPrompt'
 export default function App() {
   const { t } = useI18n()
   const quiz = useQuiz()
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className="app-shell">
@@ -18,7 +21,10 @@ export default function App() {
           <img src={assetUrl('favicon.svg')} alt="" className="brand-logo" />
           OKIN<span>·</span>Quiz
         </span>
-        <LanguageSwitcher />
+        <div className="topbar-actions">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+          <LanguageSwitcher />
+        </div>
       </header>
 
       <main>

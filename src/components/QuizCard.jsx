@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { assetUrl } from '../utils/assetUrl'
+import { playCorrectSound, playIncorrectSound, vibrate } from '../utils/feedback'
 
 export default function QuizCard({ question, index, total, answered, onAnswer, onNext }) {
   const { t } = useI18n()
@@ -12,6 +13,18 @@ export default function QuizCard({ question, index, total, answered, onAnswer, o
     if (optionId === correctId) return 'option-btn is-correct'
     if (optionId === answered.selectedId) return 'option-btn is-incorrect'
     return 'option-btn'
+  }
+
+  function handleOptionClick(optionId) {
+    if (answered) return
+    if (optionId === correctId) {
+      playCorrectSound()
+      vibrate(40)
+    } else {
+      playIncorrectSound()
+      vibrate([30, 40, 30])
+    }
+    onAnswer(optionId)
   }
 
   return (
@@ -34,7 +47,7 @@ export default function QuizCard({ question, index, total, answered, onAnswer, o
             type="button"
             className={optionClass(opt.id)}
             disabled={!!answered}
-            onClick={() => onAnswer(opt.id)}
+            onClick={() => handleOptionClick(opt.id)}
           >
             {opt.nombre}
           </button>
