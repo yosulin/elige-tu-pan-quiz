@@ -65,7 +65,8 @@ button {
 }
 
 .app-shell {
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* se ajusta al alto real visible, con o sin barra de direcciones */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -716,6 +717,56 @@ main {
   * {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* --- Poca altura disponible (pestaña normal, sin instalar): compactamos
+   en vez de dejar que aparezca scroll. Lo primero que cede es lo puramente
+   decorativo (el collage de fotos de portada), luego los espaciados. --- */
+@media (max-height: 720px) {
+  .start-collage {
+    display: none;
+  }
+
+  .start-screen {
+    gap: 14px;
+  }
+
+  main {
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .footer-note {
+    padding-bottom: 56px;
+  }
+
+  .ticket-photo-frame img {
+    max-height: 160px;
+  }
+
+  .ticket {
+    padding: 16px 16px 18px;
+  }
+}
+
+@media (max-height: 580px) {
+  .start-screen h1 {
+    font-size: 1.6rem;
+  }
+
+  .start-card {
+    padding: 18px 18px;
+    gap: 12px;
+  }
+
+  .ticket-photo-frame img {
+    max-height: 120px;
+  }
+
+  .ticket-photo-frame {
+    padding: 10px;
+    margin-bottom: 10px;
   }
 }
 
