@@ -11,6 +11,7 @@
   --sage-soft: #e4ead9;   /* fondo de acierto */
   --brick-soft: #f3ddd6;  /* fondo de error */
   --paper: #fffaf0;       /* tarjetas */
+  --white: #ffffff;       /* blanco puro — para fundirse con las fotos de producto */
 
   --font-display: 'Fraunces', ui-serif, Georgia, serif;
   --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
@@ -170,7 +171,7 @@ main {
   width: 96px;
   height: 96px;
   object-fit: contain;
-  background: var(--paper);
+  background: var(--white);
   border-radius: 16px;
   border: 1px solid var(--flour-deep);
   box-shadow: 0 10px 24px -12px rgba(46, 29, 18, 0.35);
