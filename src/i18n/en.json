@@ -25,5 +25,9 @@
   "install.dismiss": "Close install banner",
   "share.button": "Share result",
   "share.cta": "How many would you get right?",
-  "share.copied": "Copied! Paste it wherever you like."
+  "share.copied": "Copied! Paste it wherever you like.",
+  "info.title": "About this app",
+  "info.version": "Version",
+  "info.updated": "Last updated",
+  "info.close": "Close"
 }

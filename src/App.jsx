@@ -8,6 +8,7 @@ import StartScreen from './components/StartScreen'
 import QuizCard from './components/QuizCard'
 import ResultScreen from './components/ResultScreen'
 import InstallPrompt from './components/InstallPrompt'
+import InfoPanel from './components/InfoPanel'
 
 export default function App() {
   const { t } = useI18n()
@@ -22,7 +23,6 @@ export default function App() {
           OKIN<span>·</span>Quiz
         </span>
         <div className="topbar-actions">
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <LanguageSwitcher />
         </div>
       </header>
@@ -54,6 +54,8 @@ export default function App() {
 
       <p className="footer-note">{t('footer.madeIn')}</p>
       <InstallPrompt />
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
+      <InfoPanel />
     </div>
   )
 }

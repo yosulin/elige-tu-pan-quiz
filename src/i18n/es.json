@@ -25,5 +25,9 @@
   "install.dismiss": "Cerrar aviso de instalación",
   "share.button": "Compartir resultado",
   "share.cta": "¿Tú cuántos aciertas?",
-  "share.copied": "¡Copiado! Pégalo donde quieras."
+  "share.copied": "¡Copiado! Pégalo donde quieras.",
+  "info.title": "Sobre esta app",
+  "info.version": "Versión",
+  "info.updated": "Última actualización",
+  "info.close": "Cerrar"
 }

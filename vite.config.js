@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { readFileSync } from 'node:fs'
+
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
 
 // Cambia "base" al nombre de tu repositorio si lo publicas en
 // https://<usuario>.github.io/<repo>/  (déjalo en '/' si usas un dominio propio
 // o publicas en <usuario>.github.io directamente)
 export default defineConfig({
   base: './',
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10))
+  },
   plugins: [
     react(),
     VitePWA({

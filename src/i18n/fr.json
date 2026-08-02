@@ -25,5 +25,9 @@
   "install.dismiss": "Fermer la bannière d'installation",
   "share.button": "Partager le résultat",
   "share.cta": "Combien en devineriez-vous ?",
-  "share.copied": "Copié ! Collez-le où vous voulez."
+  "share.copied": "Copié ! Collez-le où vous voulez.",
+  "info.title": "À propos",
+  "info.version": "Version",
+  "info.updated": "Dernière mise à jour",
+  "info.close": "Fermer"
 }

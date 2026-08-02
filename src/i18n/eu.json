@@ -25,5 +25,9 @@
   "install.dismiss": "Itxi instalazio-abisua",
   "share.button": "Emaitza partekatu",
   "share.cta": "Zenbat asmatuko zenuke zuk?",
-  "share.copied": "Kopiatuta! Itsatsi nahi duzun tokian."
+  "share.copied": "Kopiatuta! Itsatsi nahi duzun tokian.",
+  "info.title": "Aplikazioari buruz",
+  "info.version": "Bertsioa",
+  "info.updated": "Azken eguneraketa",
+  "info.close": "Itxi"
 }

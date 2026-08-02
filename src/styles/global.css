@@ -12,6 +12,8 @@
   --brick-soft: #f3ddd6;  /* fondo de error */
   --paper: #fffaf0;       /* tarjetas */
   --white: #ffffff;       /* blanco puro — para fundirse con las fotos de producto */
+  --surface: var(--flour);       /* fondo de las opciones */
+  --surface-border: var(--flour-deep);
 
   --font-display: 'Fraunces', ui-serif, Georgia, serif;
   --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
@@ -34,7 +36,8 @@
   --sage-soft: #2a3a22;
   --brick-soft: #3c2420;
   --paper: #2a2015;        /* tarjetas */
-  --white: #fdf6ea;        /* marco de fotos — crema muy claro, no blanco puro */
+  --surface: #3c2e1c;      /* opciones — más claras que la tarjeta, para que resalten */
+  --surface-border: #4d3c26;
 
   color-scheme: dark;
 }
@@ -119,9 +122,11 @@ button {
   gap: 10px;
 }
 
-.theme-toggle {
-  width: 34px;
-  height: 34px;
+.corner-btn {
+  position: fixed;
+  bottom: 16px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--flour-deep);
   background: var(--paper);
@@ -130,13 +135,90 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  flex-shrink: 0;
+  z-index: 9;
+  box-shadow: 0 8px 20px -10px rgba(46, 29, 18, 0.4);
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.theme-toggle:hover {
+.corner-btn.bottom-left {
+  left: 16px;
+}
+
+.corner-btn.bottom-right {
+  right: 16px;
+}
+
+.corner-btn:hover {
   background: var(--flour-deep);
   color: var(--oven);
+}
+
+.info-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 12, 6, 0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 20;
+  animation: install-rise 0.15s ease-out;
+}
+
+.info-sheet {
+  background: var(--paper);
+  border-radius: 22px 22px 0 0;
+  padding: 28px 24px 30px;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.info-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.info-sheet h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.info-rows {
+  width: 100%;
+  max-width: 260px;
+  margin: 4px 0;
+}
+
+.info-rows > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--flour-deep);
+  font-size: 0.9rem;
+}
+
+.info-rows dt {
+  color: var(--oven-soft);
+}
+
+.info-rows dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.info-footer {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oven-soft);
+  opacity: 0.7;
+  margin: 0 0 8px;
 }
 
 .lang-switcher {
@@ -171,7 +253,7 @@ button {
 }
 
 .lang-switcher button:focus-visible,
-.theme-toggle:focus-visible,
+.corner-btn:focus-visible,
 .btn:focus-visible,
 .option-btn:focus-visible {
   outline: 3px solid var(--crust);
@@ -376,10 +458,10 @@ main {
 .ticket-photo-frame {
   background: repeating-linear-gradient(
     45deg,
-    var(--flour),
-    var(--flour) 10px,
-    var(--flour-deep) 10px,
-    var(--flour-deep) 11px
+    #f3ecdd,
+    #f3ecdd 10px,
+    #e6d9bd 10px,
+    #e6d9bd 11px
   );
   border-radius: 14px;
   padding: 14px;
@@ -411,8 +493,8 @@ main {
 
 .option-btn {
   text-align: left;
-  border: 1.5px solid var(--flour-deep);
-  background: var(--flour);
+  border: 1.5px solid var(--surface-border);
+  background: var(--surface);
   border-radius: 14px;
   padding: 14px 16px;
   font-size: 0.95rem;
@@ -550,7 +632,7 @@ main {
   opacity: 0.7;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding-bottom: 22px;
+  padding-bottom: 70px;
 }
 
 /* ============ INSTALL BANNER ============ */
