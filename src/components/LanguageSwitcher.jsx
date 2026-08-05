@@ -1,5 +1,6 @@
 import { useLayoutEffect, useEffect, useRef, useState } from 'react'
 import { LANGUAGES, useI18n } from '../i18n'
+import { vibrate } from '../utils/feedback'
 
 const PADDING = 4 // debe coincidir con el padding de .lang-switcher en el CSS
 const DRAG_THRESHOLD = 6 // px de movimiento antes de considerarlo arrastre y no un tap
@@ -10,7 +11,7 @@ export default function LanguageSwitcher() {
   const buttonRefs = useRef({})
   const [thumb, setThumb] = useState({ x: 0, width: 0, ready: false })
   const [dragging, setDragging] = useState(false)
-  const gestureRef = useRef({ startX: 0, thumbStartX: 0, moved: false, pointerId: null })
+  const gestureRef = useRef({ startX: 0, thumbStartX: 0, moved: false, pointerId: null, hoverLang: null })
 
   function measure() {
     const container = containerRef.current
@@ -56,7 +57,8 @@ export default function LanguageSwitcher() {
       startX: e.clientX,
       thumbStartX: thumb.x,
       moved: false,
-      pointerId: e.pointerId
+      pointerId: e.pointerId,
+      hoverLang: lang
     }
     e.currentTarget.setPointerCapture(e.pointerId)
   }
@@ -76,6 +78,12 @@ export default function LanguageSwitcher() {
     const maxX = containerBox.width - thumb.width - PADDING
     const newX = Math.max(PADDING, Math.min(g.thumbStartX + deltaX, maxX))
     setThumb((t) => ({ ...t, x: newX }))
+
+    const overLang = closestLangForCenterX(newX + thumb.width / 2)
+    if (overLang !== g.hoverLang) {
+      g.hoverLang = overLang
+      vibrate(8) // toque ligero, tipo "muesca", al cruzar a otro idioma
+    }
   }
 
   function handlePointerUp(e) {
