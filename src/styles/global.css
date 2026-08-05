@@ -223,6 +223,7 @@ button {
 }
 
 .lang-switcher {
+  position: relative;
   display: flex;
   gap: 4px;
   background: var(--paper);
@@ -231,7 +232,22 @@ button {
   padding: 4px;
 }
 
+.lang-thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  border-radius: var(--radius-pill);
+  background: var(--oven);
+  transition: transform 0.32s cubic-bezier(0.65, 0, 0.35, 1),
+    width 0.32s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.15s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .lang-switcher button {
+  position: relative;
+  z-index: 1;
   border: none;
   background: transparent;
   color: var(--oven-soft);
@@ -241,15 +257,14 @@ button {
   padding: 6px 11px;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: color 0.2s ease;
 }
 
-.lang-switcher button:hover {
-  background: var(--flour-deep);
+.lang-switcher button:hover:not([aria-pressed='true']) {
+  color: var(--oven);
 }
 
 .lang-switcher button[aria-pressed='true'] {
-  background: var(--oven);
   color: var(--flour);
 }
 
