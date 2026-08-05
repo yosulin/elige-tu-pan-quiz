@@ -23,14 +23,22 @@ export default function LanguageSwitcher() {
     setThumb({ x: btnBox.left - containerBox.left, width: btnBox.width, ready: true })
   }
 
+  // measureRef siempre apunta a la versión más reciente de measure() (con el
+  // "lang" actual en su cierre). El listener de resize, registrado una sola
+  // vez, llama a measureRef.current() — así nunca queda "congelado" con el
+  // idioma que estaba activo cuando se montó el componente.
+  const measureRef = useRef(measure)
+  measureRef.current = measure
+
   useLayoutEffect(() => {
     if (!dragging) measure()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang])
 
   useEffect(() => {
-    window.addEventListener('resize', measure)
-    return () => window.removeEventListener('resize', measure)
+    const onResize = () => measureRef.current()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
   }, [])
 
   function closestLangForCenterX(centerX) {
@@ -102,15 +110,22 @@ export default function LanguageSwitcher() {
     // si no hubo arrastre, el onClick nativo del botón se encarga del tap
   }
 
+  // Una cancelación (el navegador decide que es un scroll, un gesto del
+  // sistema lo interrumpe, etc.) debe DEVOLVER la píldora a su sitio, no
+  // confirmar el idioma donde sea que estuviera en ese instante.
+  function handlePointerCancel(e) {
+    const g = gestureRef.current
+    if (g.pointerId !== e.pointerId) return
+    setDragging(false)
+    setHoverLang(lang)
+    measure()
+  }
+
   function handleClick(code) {
     if (gestureRef.current.moved) return // ya resuelto como arrastre en pointerup
     setLang(code)
   }
 
-  // Durante el arrastre hay hasta tres estados visuales a la vez:
-  // - bajo la píldora ahora mismo -> texto blanco (legible sobre el fondo oscuro)
-  // - de donde venimos (el idioma aún seleccionado, ya abandonado) -> pastel + cobre
-  // - el resto -> tono neutro de siempre
   function getButtonClassName(code) {
     if (dragging) {
       if (code === hoverLang) return 'is-active'
@@ -143,7 +158,7 @@ export default function LanguageSwitcher() {
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
           onClick={() => handleClick(code)}
         >
           {label}

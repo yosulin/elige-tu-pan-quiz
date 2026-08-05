@@ -19,6 +19,11 @@ function getGitHash() {
 // o publicas en <usuario>.github.io directamente)
 export default defineConfig({
   base: './',
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js'
+  },
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
     __GIT_HASH__: JSON.stringify(getGitHash()),
@@ -31,6 +36,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,svg,png,jpg,jpeg,webmanifest}']
+      },
       manifest: {
         name: 'Elige tu pan · OKIN Quiz',
         short_name: 'OKIN Quiz',

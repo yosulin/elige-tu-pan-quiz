@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo, useCallback } from 'react'
+import { createContext, useContext, useState, useMemo, useCallback, useEffect } from 'react'
 import es from './es.json'
 import eu from './eu.json'
 import en from './en.json'
@@ -30,6 +30,13 @@ const I18nContext = createContext(null)
 
 export function I18nProvider({ children }) {
   const [lang, setLangState] = useState(detectInitialLanguage)
+
+  // El <html lang="..."> debe reflejar el idioma real del contenido, no
+  // quedarse fijo en "es" — importa para lectores de pantalla y para que
+  // el navegador no ofrezca traducir una página que ya está en ese idioma.
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   const setLang = useCallback((code) => {
     if (!DICTIONARIES[code]) return

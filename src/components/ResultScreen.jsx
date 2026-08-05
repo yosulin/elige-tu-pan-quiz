@@ -9,7 +9,7 @@ function tierKey(percentage) {
   return 'result.tier.low'
 }
 
-function buildShareText({ t, correctCount, totalQuestions, percentage, history }) {
+export function buildShareText({ t, correctCount, totalQuestions, percentage, history }) {
   const grid = history.map((ok) => (ok ? '🟫' : '⬜')).join('')
   const url = window.location.href.split('?')[0].split('#')[0]
   return [
@@ -21,27 +21,36 @@ function buildShareText({ t, correctCount, totalQuestions, percentage, history }
   ].join('\n')
 }
 
+async function copyToClipboard(text, onSuccess) {
+  try {
+    await navigator.clipboard.writeText(text)
+    onSuccess()
+  } catch {
+    // sin API de portapapeles disponible (o sin permiso); no hay fallback razonable más
+  }
+}
+
 export default function ResultScreen({ correctCount, totalQuestions, percentage, history, onPlayAgain }) {
   const { t } = useI18n()
   const [copied, setCopied] = useState(false)
 
   async function handleShare() {
     const text = buildShareText({ t, correctCount, totalQuestions, percentage, history })
+    const showCopied = () => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    }
+
     if (navigator.share) {
       try {
         await navigator.share({ text })
-      } catch {
-        // el usuario canceló el diálogo de compartir; no hacemos nada
+        return // compartido con éxito
+      } catch (err) {
+        if (err?.name === 'AbortError') return // el usuario canceló el diálogo: no insistimos
+        // cualquier otro fallo (permiso denegado, target no disponible...) cae al portapapeles
       }
-      return
     }
-    try {
-      await navigator.clipboard.writeText(text)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2500)
-    } catch {
-      // sin API de portapapeles disponible; no hay fallback razonable más
-    }
+    await copyToClipboard(text, showCopied)
   }
 
   return (
