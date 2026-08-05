@@ -113,3 +113,10 @@ de darle más difusión.
 - Publicación en tiendas: Google Play es viable y barato (TWA vía
   PWABuilder/Bubblewrap, 25$ un pago). App Store de Apple, no — su
   política rechaza explícitamente apps que sean "una web reempaquetada".
+- **Taxonomía de panes** (forma, tamaño, composición, objetivo de uso) para
+  dificultad progresiva y un futuro "modo aprendizaje" organizado por
+  familias. `familia` (categoría comercial de OKIN: Rustikos, Premiere,
+  Gourmet...) ya está en `panes.json`, verificada contra las páginas de
+  familia del catálogo. El resto — sobre todo el "objetivo de uso" — no se
+  puede inferir con confianza solo del nombre; queda pendiente del
+  conocimiento del departamento de producción, no es una tarea técnica.
