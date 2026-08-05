@@ -8,6 +8,7 @@ import StartScreen from './components/StartScreen'
 import QuizCard from './components/QuizCard'
 import ResultScreen from './components/ResultScreen'
 import InstallPrompt from './components/InstallPrompt'
+import UpdateToast from './components/UpdateToast'
 import InfoPanel from './components/InfoPanel'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <UpdateToast />
       <header className="topbar">
         <span className="brand">
           <img src={assetUrl('favicon.svg')} alt="" className="brand-logo" />

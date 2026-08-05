@@ -30,5 +30,8 @@
   "info.version": "Versión",
   "info.build": "Compilación",
   "info.updated": "Última actualización",
-  "info.close": "Cerrar"
+  "info.close": "Cerrar",
+  "update.available": "Hay una versión nueva",
+  "update.reload": "Actualizar",
+  "update.dismiss": "Cerrar aviso de actualización"
 }

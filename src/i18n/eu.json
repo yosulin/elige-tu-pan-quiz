@@ -30,5 +30,8 @@
   "info.version": "Bertsioa",
   "info.build": "Konpilazioa",
   "info.updated": "Azken eguneraketa",
-  "info.close": "Itxi"
+  "info.close": "Itxi",
+  "update.available": "Bertsio berri bat dago",
+  "update.reload": "Eguneratu",
+  "update.dismiss": "Itxi eguneratze-abisua"
 }

@@ -30,5 +30,8 @@
   "info.version": "Version",
   "info.build": "Build",
   "info.updated": "Dernière mise à jour",
-  "info.close": "Fermer"
+  "info.close": "Fermer",
+  "update.available": "Une nouvelle version est disponible",
+  "update.reload": "Mettre à jour",
+  "update.dismiss": "Fermer la bannière de mise à jour"
 }
