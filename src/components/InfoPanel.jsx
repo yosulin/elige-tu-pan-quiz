@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n'
 import { assetUrl } from '../utils/assetUrl'
+import { vibrate } from '../utils/feedback'
 
 export default function InfoPanel() {
   const { t } = useI18n()
@@ -11,7 +12,10 @@ export default function InfoPanel() {
       <button
         type="button"
         className="corner-btn bottom-right"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          vibrate(12)
+          setOpen(true)
+        }}
         aria-label={t('info.title')}
         title={t('info.title')}
       >

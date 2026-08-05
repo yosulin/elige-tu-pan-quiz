@@ -1,10 +1,18 @@
+import { vibrate } from '../utils/feedback'
+
 export default function ThemeToggle({ theme, onToggle }) {
   const isDark = theme === 'dark'
+
+  function handleClick() {
+    vibrate(12)
+    onToggle()
+  }
+
   return (
     <button
       type="button"
       className="corner-btn bottom-left"
-      onClick={onToggle}
+      onClick={handleClick}
       aria-label={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
       title={isDark ? 'Modo claro' : 'Modo oscuro'}
     >
