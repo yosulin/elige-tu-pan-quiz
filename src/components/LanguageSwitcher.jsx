@@ -2,6 +2,7 @@ import { useLayoutEffect, useEffect, useRef, useState } from 'react'
 import { LANGUAGES, useI18n } from '../i18n'
 
 const PADDING = 4 // debe coincidir con el padding de .lang-switcher en el CSS
+const DRAG_THRESHOLD = 6 // px de movimiento antes de considerarlo arrastre y no un tap
 
 export default function LanguageSwitcher() {
   const { lang, setLang } = useI18n()
@@ -9,7 +10,7 @@ export default function LanguageSwitcher() {
   const buttonRefs = useRef({})
   const [thumb, setThumb] = useState({ x: 0, width: 0, ready: false })
   const [dragging, setDragging] = useState(false)
-  const dragOffsetRef = useRef(0)
+  const gestureRef = useRef({ startX: 0, thumbStartX: 0, moved: false, pointerId: null })
 
   function measure() {
     const container = containerRef.current
@@ -20,7 +21,6 @@ export default function LanguageSwitcher() {
     setThumb({ x: btnBox.left - containerBox.left, width: btnBox.width, ready: true })
   }
 
-  // Mientras se arrastra, la posición la controla el puntero, no este efecto
   useLayoutEffect(() => {
     if (!dragging) measure()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,34 +49,51 @@ export default function LanguageSwitcher() {
     return closestCode
   }
 
+  // El gesto empieza en el BOTÓN (que es lo que realmente se toca/pulsa),
+  // no en la píldora — la píldora queda siempre tapada por el botón activo.
   function handlePointerDown(e) {
-    const container = containerRef.current
-    if (!container) return
-    const containerBox = container.getBoundingClientRect()
-    const pointerX = e.clientX - containerBox.left
-    dragOffsetRef.current = pointerX - thumb.x
-    setDragging(true)
+    gestureRef.current = {
+      startX: e.clientX,
+      thumbStartX: thumb.x,
+      moved: false,
+      pointerId: e.pointerId
+    }
     e.currentTarget.setPointerCapture(e.pointerId)
   }
 
   function handlePointerMove(e) {
-    if (!dragging) return
-    const container = containerRef.current
-    if (!container) return
-    const containerBox = container.getBoundingClientRect()
-    const pointerX = e.clientX - containerBox.left
+    const g = gestureRef.current
+    if (g.pointerId !== e.pointerId) return
+    const deltaX = e.clientX - g.startX
+    if (!g.moved && Math.abs(deltaX) < DRAG_THRESHOLD) return
+
+    if (!g.moved) {
+      g.moved = true
+      setDragging(true)
+    }
+
+    const containerBox = containerRef.current.getBoundingClientRect()
     const maxX = containerBox.width - thumb.width - PADDING
-    const newX = Math.max(PADDING, Math.min(pointerX - dragOffsetRef.current, maxX))
+    const newX = Math.max(PADDING, Math.min(g.thumbStartX + deltaX, maxX))
     setThumb((t) => ({ ...t, x: newX }))
   }
 
-  function handlePointerUp() {
-    if (!dragging) return
-    setDragging(false)
-    const thumbCenter = thumb.x + thumb.width / 2
-    const closestCode = closestLangForCenterX(thumbCenter)
-    if (closestCode !== lang) setLang(closestCode)
-    else measure() // soltó sin cambiar: que vuelva a encajar en su sitio
+  function handlePointerUp(e) {
+    const g = gestureRef.current
+    if (g.pointerId !== e.pointerId) return
+    if (g.moved) {
+      setDragging(false)
+      const thumbCenter = thumb.x + thumb.width / 2
+      const closestCode = closestLangForCenterX(thumbCenter)
+      if (closestCode !== lang) setLang(closestCode)
+      else measure()
+    }
+    // si no hubo arrastre, el onClick nativo del botón se encarga del tap
+  }
+
+  function handleClick(code) {
+    if (gestureRef.current.moved) return // ya resuelto como arrastre en pointerup
+    setLang(code)
   }
 
   return (
@@ -88,10 +105,6 @@ export default function LanguageSwitcher() {
           width: `${thumb.width}px`,
           opacity: thumb.ready ? 1 : 0
         }}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
         aria-hidden="true"
       />
       {LANGUAGES.map(({ code, label }) => (
@@ -102,7 +115,11 @@ export default function LanguageSwitcher() {
           }}
           type="button"
           aria-pressed={lang === code}
-          onClick={() => setLang(code)}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onClick={() => handleClick(code)}
         >
           {label}
         </button>
