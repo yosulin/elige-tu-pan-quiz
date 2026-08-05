@@ -14,6 +14,8 @@
   --white: #ffffff;       /* blanco puro — para fundirse con las fotos de producto */
   --surface: var(--flour);       /* fondo de las opciones */
   --surface-border: var(--flour-deep);
+  --origin-bg: #efd9b8;    /* pastel — idioma que se abandona al arrastrar */
+  --origin-text: #a65a2e;  /* cobre */
 
   --font-display: 'Fraunces', ui-serif, Georgia, serif;
   --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
@@ -38,6 +40,8 @@
   --paper: #2a2015;        /* tarjetas */
   --surface: #3c2e1c;      /* opciones — más claras que la tarjeta, para que resalten */
   --surface-border: #4d3c26;
+  --origin-bg: #4a3620;    /* pastel oscuro — misma idea, tonos de noche */
+  --origin-text: #d98a52;  /* cobre más luminoso, para contraste en oscuro */
 
   color-scheme: dark;
 }
@@ -262,15 +266,20 @@ button {
   border-radius: var(--radius-pill);
   cursor: grab;
   touch-action: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
-.lang-switcher button:hover:not([aria-pressed='true']) {
+.lang-switcher button:hover:not(.is-active):not(.is-origin) {
   color: var(--oven);
 }
 
-.lang-switcher button[aria-pressed='true'] {
+.lang-switcher button.is-active {
   color: var(--flour);
+}
+
+.lang-switcher button.is-origin {
+  background: var(--origin-bg);
+  color: var(--origin-text);
 }
 
 .lang-switcher button:focus-visible,

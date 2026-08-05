@@ -11,6 +11,7 @@ export default function LanguageSwitcher() {
   const buttonRefs = useRef({})
   const [thumb, setThumb] = useState({ x: 0, width: 0, ready: false })
   const [dragging, setDragging] = useState(false)
+  const [hoverLang, setHoverLang] = useState(lang)
   const gestureRef = useRef({ startX: 0, thumbStartX: 0, moved: false, pointerId: null, hoverLang: null })
 
   function measure() {
@@ -60,6 +61,7 @@ export default function LanguageSwitcher() {
       pointerId: e.pointerId,
       hoverLang: lang
     }
+    setHoverLang(lang)
     e.currentTarget.setPointerCapture(e.pointerId)
   }
 
@@ -82,6 +84,7 @@ export default function LanguageSwitcher() {
     const overLang = closestLangForCenterX(newX + thumb.width / 2)
     if (overLang !== g.hoverLang) {
       g.hoverLang = overLang
+      setHoverLang(overLang)
       vibrate(8) // toque ligero, tipo "muesca", al cruzar a otro idioma
     }
   }
@@ -104,6 +107,19 @@ export default function LanguageSwitcher() {
     setLang(code)
   }
 
+  // Durante el arrastre hay hasta tres estados visuales a la vez:
+  // - bajo la píldora ahora mismo -> texto blanco (legible sobre el fondo oscuro)
+  // - de donde venimos (el idioma aún seleccionado, ya abandonado) -> pastel + cobre
+  // - el resto -> tono neutro de siempre
+  function getButtonClassName(code) {
+    if (dragging) {
+      if (code === hoverLang) return 'is-active'
+      if (code === lang) return 'is-origin'
+      return ''
+    }
+    return code === lang ? 'is-active' : ''
+  }
+
   return (
     <div className="lang-switcher" ref={containerRef} role="group" aria-label="Idioma / Hizkuntza / Language / Langue">
       <span
@@ -122,6 +138,7 @@ export default function LanguageSwitcher() {
             buttonRefs.current[code] = el
           }}
           type="button"
+          className={getButtonClassName(code)}
           aria-pressed={lang === code}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
